@@ -11,7 +11,6 @@ switch ($method) {
 			$usuario=Usuario::getUsuarioDeId($_GET["id"]);
 			print json_encode($usuario);
 		}else{
-			// listar
 			print json_encode(Usuario::lista());
 		}
 		break;
@@ -24,7 +23,6 @@ switch ($method) {
 		$usuario->cel=$data["cel"];
 		$usuario->usuario=$data["usuario"];
 		$usuario->pass=$data["password"];
-		$usuario->tipo=$data["tipo"];
 		if ($usuario->guardar()){
 			http_response_code(201);
 			print json_encode($usuario);
