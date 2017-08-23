@@ -21,12 +21,10 @@ switch ($method) {
 			$transaccion=R::findOne( T_transacciones, ' id = ? ', [ $_GET["transaccion"] ] );
 			if(!is_null($transaccion)){
 				$transaccion->tipo_transaccion=R::findOne( T_tipos_transaccion, ' id = ? ', [ $transaccion->fk_tipo_transaccion ] );
-				unset($transaccion->fk_tipo_transaccion);	// borramos este campo inutil
 				$operaciones=R::find( T_operaciones, ' fk_transaccion = ? ', [ $transaccion->id ] );
 				$operaciones_result=[];
 				foreach ($operaciones as $operacion){
 					$operacion->cuenta=R::findOne( T_cuentas, ' id = ? ', [ $operacion->fk_cuenta ] );
-					unset($operacion->fk_cuenta);	// borramos este campo inutil
 					array_push($operaciones_result,$operacion);
 				}
 				$transaccion->operaciones=$operaciones_result;
@@ -45,7 +43,11 @@ switch ($method) {
 				$result["cuentas"]=$cuentas;
 				$result["tipos_transaccion"]=R::find(T_tipos_transaccion);
 				$result["sig_nro_comprobante"]=R::getCell('SELECT max(nro_comprobante) FROM '.T_transacciones)+1;
-				$result["transacciones"]=R::findAll(T_transacciones);
+				$transacciones=R::findAll(T_transacciones);
+				foreach ($transacciones as $transaccion){
+					$transaccion->tipo_transaccion=R::findOne( T_tipos_transaccion, ' id = ? ', [ $transaccion->fk_tipo_transaccion ] );
+				}
+				$result["transacciones"]=$transacciones;
 			}
 		}
 		print json_encode($result);
@@ -57,7 +59,7 @@ switch ($method) {
 			$transaccion=R::dispense(T_transacciones);
 			$transaccion->nro_comprobante=$data["nro_comprobante"];
 			$transaccion->nro_tipo_comprobante=$data["nro_tipo_comprobante"];
-			$transaccion->fk_tipo_transaccion=$data["tipo_transaccion"]["id"];
+			$transaccion->fk_tipo_transaccion=$data["fk_tipo_transaccion"];
 			$transaccion->glosa=$data["glosa"];
 			$transaccion->fecha=$data["fecha"];
 			$id_transaccion=R::store($transaccion);
@@ -91,22 +93,26 @@ switch ($method) {
 			$transaccion=R::findOne(T_transacciones, ' id = ? ',[$data["id"]]);
 			$transaccion->nro_comprobante=$data["nro_comprobante"];
 			$transaccion->nro_tipo_comprobante=$data["nro_tipo_comprobante"];
-			$transaccion->fk_tipo_transaccion=$data["tipo_transaccion"]["id"];
+			$transaccion->fk_tipo_transaccion=$data["fk_tipo_transaccion"];
 			$transaccion->glosa=$data["glosa"];
 			//$transaccion->fecha=$data["fecha"];
 			$id_transaccion=R::store($transaccion);
 			$operaciones=$data["operaciones"];
+			$operacionesantiguas=R::find( T_operaciones, ' fk_transaccion = ? ', [ $id_transaccion ] );
+			// guardamos las nuevas operaciones
 			foreach ($operaciones as $ope){
-				if($ope["id"]==null)
-					$operacion=R::dispense(T_operaciones);
-				else
-					$operacion=R::findOne(T_operaciones, ' id=? ',[$ope["id"]]);
+				$operacion=R::dispense(T_operaciones);
 				$operacion->fk_cuenta=$ope["cuenta"]["id"];
 				//$operacion->descripcion=$ope["descripcion"];
 				$operacion->debe=$ope["debe"];
 				$operacion->haber=$ope["haber"];
 				$operacion->fk_transaccion=$id_transaccion;
 				$id=R::store($operacion);
+			}
+			//Borrando operaciones antiguas
+			foreach ($operacionesantiguas as $ope){
+				$operacion=R::findOne(T_operaciones, ' id=? ',[$ope["id"]]);
+				R::trash($operacion);
 			}
 			http_response_code(200);
 			$transaccion=R::load(T_transacciones,$id_transaccion);

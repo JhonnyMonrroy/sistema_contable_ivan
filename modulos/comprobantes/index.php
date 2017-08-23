@@ -42,7 +42,8 @@
 				<td>{{ transaccion.id}}</td>
 				<td>{{ transaccion.nro_comprobante }}</td>
 				<td>{{ transaccion.nro_tipo_comprobante }}</td>
-				<td>{{ transaccion.fk_tipo_transaccion }}</td>
+<!-- 				<td>{{ transaccion.fk_tipo_transaccion }}</td> -->
+				<td>{{ transaccion.tipo_transaccion.tipo_transaccion }}</td>
 				<td>{{ transaccion.fecha | date : "dd/MM/yyyy" }}</td>
 				<td>{{ transaccion.glosa }}</td>
 				<td>
@@ -85,10 +86,10 @@
 								<div class="form-group col-sm-2">
 									<select class="form-control" id="tipo_c"
 										data-ng-change="actualizarNroTipoComprobante()"
-										data-ng-model="transaccion.tipo_transaccion">
+										data-ng-model="transaccion.fk_tipo_transaccion">
 										<option></option>
 										<option data-ng-repeat="tipo_transaccion in tipos_transaccion"
-											value="{{tipo_transaccion}}">{{tipo_transaccion.tipo_transaccion}}</option>
+											value="{{tipo_transaccion.id}}">{{tipo_transaccion.tipo_transaccion}}</option>
 									</select>
 								</div>
 								<label class="control-label col-sm-2" for="fecha_c">FECHA:</label>
@@ -98,7 +99,7 @@
 											uib-datepicker-popup="dd/MM/yyyy"
 											ng-model="transaccion.fecha" is-open="popup1.opened"
 											datepicker-options="dateOptions" ng-required="true"
-											close-text="Close" alt-input-formats="altInputFormats" /> <span
+											close-text="Close" alt-input-formats="altInputFormats" value="{{transaccion.fecha | date : "dd/MM/yyyy" }}" /> <span
 											class="input-group-btn">
 											<button type="button" class="btn btn-default"
 												ng-click="open1()">

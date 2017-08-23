@@ -64,7 +64,7 @@ app
 							operaciones : []
 						};
 						$scope.operacion = {
-							id :null,
+							id :-Math.random(),
 							debe : 0.0,
 							haber : 0.0,
 							cuenta : null
@@ -101,7 +101,7 @@ app
 						$scope.transaccion.operaciones.push(operacion);
 						//console.log(operacion);
 						$scope.operacion = {
-							id : null,
+							id : -Math.random(),
 							debe : 0.0,
 							haber : 0.0,
 							descripcion : "",
@@ -115,7 +115,7 @@ app
 					 */
 					$scope.eliminarOperacion = function(operacion) {
 						if (confirm("Desea eliminar la operación: "
-								+ cosigo +" - " +operacion.cuenta.nombre_cta)) {
+								+operacion.cuenta.nombre_cta)) {
 							var vecOpe = [];
 							for (var i = 0; i < $scope.transaccion.operaciones.length; i++) {
 								if ($scope.transaccion.operaciones[i].id !== operacion.id) {
@@ -134,7 +134,7 @@ app
 					$scope.editarTransaccion = function(transaccion) {
 						$scope.tituloModal = "Editar Transaccion";
 						$scope.operacion = {
-								id :null,
+								id :-Math.random(),
 								debe : 0.0,
 								haber : 0.0,
 								cuenta : null
@@ -144,6 +144,8 @@ app
 							method : "GET",
 						}).then(function(response) {
 							$scope.transaccion = response.data.transaccion;
+							var dia=new Date($scope.transaccion.fecha);
+							$scope.transaccion.fecha = dia.getTime() + (dia.getTimezoneOffset() * 60000);	// para la fecha en el lugar actual
 							$http
 							.get("api.php")
 							.then(
@@ -163,7 +165,7 @@ app
 					 */
 					$scope.guardarTransaccion = function() {
 						//alert($scope.transaccion.fecha);
-						$scope.transaccion.tipo_transaccion=JSON.parse($scope.transaccion.tipo_transaccion);
+						//$scope.transaccion.tipo_transaccion=JSON.parse($scope.transaccion.tipo_transaccion);
 						console.log($scope.transaccion);
 						$http(
 								{
@@ -190,27 +192,27 @@ app
 								});
 					};
 
-					/**
-					 * Eliminar Usuario
-					 */
-					$scope.eliminarUsuario = function(usuario) {
-						// console.log(usuario);
-						if (confirm("Esta seguro de eliminar al usuario: "
-								+ usuario.nombre)) {
-							$http({
-								url : 'api.php',
-								method : "DELETE",
-								data : {
-									"id" : usuario.id
-								}
-							}).then(function(response) {
-								$scope.cargarUsuarios();
-							}, function(error) { // optional
-								alert("Ocurrio un error");
-								console.log("ERROR:", error)
-							});
-						}
-					};
+//					/**
+//					 * Eliminar Usuario
+//					 */
+//					$scope.eliminarUsuario = function(usuario) {
+//						// console.log(usuario);
+//						if (confirm("Esta seguro de eliminar al usuario: "
+//								+ usuario.nombre)) {
+//							$http({
+//								url : 'api.php',
+//								method : "DELETE",
+//								data : {
+//									"id" : usuario.id
+//								}
+//							}).then(function(response) {
+//								$scope.cargarUsuarios();
+//							}, function(error) { // optional
+//								alert("Ocurrio un error");
+//								console.log("ERROR:", error)
+//							});
+//						}
+//					};
 					$scope.popup1 = {
 						opened : false
 					};
