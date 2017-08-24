@@ -76,17 +76,15 @@
 						<h4 class="modal-title">{{ tituloModal }}</h4>
 					</div>
 					<div class="modal-body">
-
-						<form class="form-horizontal">
-
+						<div class="form-horizontal">
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="fecha_c">FECHA:</label>
-								<p class="input-group">
+								<label for="fecha_c" class="control-label col-sm-2">FECHA:</label>
+								<p class="input-group col-sm-2">
 									<input type="text" class="form-control"
-										uib-datepicker-popup="dd/MM/yyyy" ng-model="ordenCompra.fecha"
-										is-open="popup1.opened" datepicker-options="dateOptions"
-										ng-required="true" close-text="Close"
-										alt-input-formats="altInputFormats" /> <span
+										uib-datepicker-popup="dd/MM/yyyy"
+										ng-model="orden_compra.fecha" is-open="popup1.opened"
+										datepicker-options="dateOptions" ng-required="true"
+										close-text="Close" alt-input-formats="altInputFormats" /> <span
 										class="input-group-btn">
 										<button type="button" class="btn btn-default"
 											ng-click="open1()">
@@ -95,10 +93,9 @@
 									</span>
 								</p>
 							</div>
-
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="proveedor">Proveedor:</label>
-								<div>
+								<label for="proveedor" class="control-label col-sm-2">PROVEEDOR:</label>
+								<div class="input-group col-sm-8">
 									<select class="form-control" id="proveedor"
 										data-ng-model="orden_compra.fk_proveedor">
 										<option></option>
@@ -108,43 +105,18 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-1" for="ncomprobante">No.:
-								</label>
-								<div class="col-sm-1">
-									<span>{{transaccion.nro_comprobante}}</span>
-								</div>
-								<label class="control-label col-sm-1" for="ntc">No.
-									Tipo:</label>
-								<div class="col-sm-1">
-									<span>{{transaccion.nro_tipo_comprobante}}</span>
-								</div>
-
-
-								<label class="control-label col-sm-2" for="fecha_c">FECHA:</label>
-								<div class="form-group col-sm-2">
-									<p class="input-group">
-										<input type="text" class="form-control"
-											uib-datepicker-popup="dd/MM/yyyy"
-											ng-model="transaccion.fecha" is-open="popup2.opened"
-											datepicker-options="dateOptions" ng-required="true"
-											close-text="Close" alt-input-formats="altInputFormats" /> <span
-											class="input-group-btn">
-											<button type="button" class="btn btn-default"
-												ng-click="open2()">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</button>
-										</span>
-									</p>
-								</div>
+								<label for="contenedor" class="control-label col-sm-2">CONTENEDOR:</label> <div class="input-group col-sm-8"><input type="text"
+									class="form-control" id="contenedor"
+									data-ng-model="orden_compra.contenedor"></div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-1" for="glosa">Glosa:</label>
-								<div class="col-sm-11">
-									<input type="text" class="form-control" id="glosa"
-										ng-model="transaccion.glosa" placeholder="Glosa del asiento">
-								</div>
+								<label for="origen" class="control-label col-sm-2">ORIGEN:</label> <div class="input-group col-sm-8"><input type="text"
+									class="form-control" data-ng-model="orden_compra.origen"></div>
 							</div>
-							<div class="modal-heading">Detalle del comprobante</div>
+						</div>
+
+						<form class="form-horizontal">
+							<div class="modal-heading">Productos solicitados</div>
 							<div class="modal-body">
 								<table class="table table-bordered">
 									<thead>
@@ -153,7 +125,7 @@
 											<th>DESCRIPCION</th>
 											<th>DEBE</th>
 											<th>HABER</th>
-											<th></th>
+											<th><!-- TODO Adicionar boton mas --> +</th>
 										</tr>
 									</thead>
 									<tbody>
