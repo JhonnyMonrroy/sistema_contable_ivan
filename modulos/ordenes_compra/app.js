@@ -12,8 +12,6 @@ app
 
 					$scope.cargarOrdendesCompra();
 
-
-
 					/**
 					 * Muestra una orden de compra
 					 * */
@@ -29,20 +27,44 @@ app
 					 */
 					$scope.nuevaOrdenCompra = function() {
 						$scope.orden_compra = {
-							id : null
+							id : -Math.random(),
+							productos_compra : []
 						};
+						$scope.ocultarSubFormulario=true;
 						$scope.tituloModal = "Nueva orden de compra";
 						// obtenemos a los proveedores
-						$http
-								.get("../proveedores/api.php")
-								.then(
-										function(response) {
-											$scope.proveedores = response.data;
-											$('#editarOrdenCompraModal').modal(
-													'toggle');
-										});
-
+						$http.get("../proveedores/api.php")
+							.then(function(response) {
+								$scope.proveedores = response.data;
+								$http.get("../productos/api.php").then(function(response){
+									$scope.productos = response.data;
+									$('#editarOrdenCompraModal').modal('toggle');
+								});
+							});
 					};
+
+					/**
+					 * adiciona un nuevo producto temporal a la transaccion
+					 */
+					$scope.adicionarProductoCompra = function(producto_compra) {
+						$http.get("../productos/api.php?id="+producto_compra.fk_producto).then(function(producto){
+							producto_compra.producto=producto.data;
+							$scope.orden_compra.productos_compra.push(producto_compra);
+							$scope.inicializarProductoCompra();
+							$scope.ocultarSubFormulario=true;
+						});
+					};
+
+					// TODO: Adicionar la funcion eliminar Producto Compra
+
+					/**
+					 * funcion que inicializa un producto_compra
+					 * */
+					$scope.inicializarProductoCompra = function(){
+						$scope.producto_compra = {
+								id : -Math.random()
+							};
+					}
 
 					/**
 					 * Se prepara la orden de compra para editar

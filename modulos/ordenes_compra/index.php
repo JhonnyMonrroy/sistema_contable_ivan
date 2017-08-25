@@ -121,57 +121,52 @@
 								<table class="table table-bordered">
 									<thead>
 										<tr>
-											<th>COD_CUENTA</th>
+											<th>CODIGO</th>
 											<th>DESCRIPCION</th>
-											<th>DEBE</th>
-											<th>HABER</th>
-											<th><!-- TODO Adicionar boton mas --> +</th>
+											<th>CANTIDAD DE PEDIDO</th>
+											<th>PRECIO UNITARIO</th>
+											<th>TOTAL</th>
+											<th><button type="button"
+													class="btn btn-default btn-xl glyphicon {{ocultarSubFormulario?'glyphicon-plus':'glyphicon-minus'}}"
+													data-ng-click="ocultarSubFormulario=!ocultarSubFormulario" title="{{ocultarSubFormulario?'Mostrar Adicionar Producto':'Ocultar Adicionar Producto'}}"></button></th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr data-ng-repeat="operacion in transaccion.operaciones">
-											<td>{{operacion.cuenta.codigo}}</td>
-											<td>{{operacion.cuenta.nombre_cta}}</td>
-											<td>{{operacion.debe}}</td>
-											<td>{{operacion.haber}}</td>
+										<tr data-ng-repeat="prod in orden_compra.productos_compra">
+											<td>{{prod.producto.codigo_prod}}</td>
+											<td>{{prod.producto.producto}} {{prod.producto.marca}} {{prod.producto.modelo}} {{prod.producto.descripcion}}</td>
+											<td>{{prod.cantidad}}</td>
+											<td>{{prod.precio_unitario}}</td>
+											<td>{{prod.cantidad*prod.precio_unitario}}</td>
 											<td>
 												<button type="button"
 													class="btn btn-danger btn-xs glyphicon glyphicon-remove"
 													data-ng-click="eliminarOperacion(operacion)"></button>
 											</td>
 										</tr>
-										<tr>
+										<tr data-ng-hide="ocultarSubFormulario">
 											<td colspan="2">
-												<div class="form-group col-sm-10">
+												<div class="form-group col-sm-12">
 													<select class="form-control" id="sel1"
-														data-ng-model="operacion.cuenta">
+														data-ng-model="producto_compra.fk_producto">
 														<option selected></option>
-														<option data-ng-repeat="cuenta in cuentas"
-															value="{{cuenta}}">{{cuenta.codigo}} -
-															{{cuenta.nombre_cta}}</option>
+														<option data-ng-repeat="producto in productos"
+															value="{{producto.id}}">{{producto.codigo_prod}} - {{producto.producto}} {{producto.marca}} {{producto.modelo}} {{producto.descripcion}}</option>
 													</select>
 												</div>
 											</td>
 											<!-- 											<td><input type="text" -->
 											<!-- 												data-ng-model="operacion.descripcion" /></td> -->
-											<td><input type="text" data-ng-model="operacion.debe" /></td>
-											<td><input type="text" data-ng-model="operacion.haber" /></td>
+											<td><input type="text" data-ng-model="producto_compra.cantidad" /></td>
+											<td><input type="text" data-ng-model="producto_compra.precio_unitario" /></td>
+											<td>
+												{{(producto_compra.cantidad!=''&&producto_compra.precio_unitario)?producto_compra.cantidad*producto_compra.precio_unitario:null}}
+											</td>
 											<td>
 												<button type="button"
 													class="btn btn-primary btn-xl glyphicon glyphicon-ok"
-													data-ng-click="adicionarOperacion(operacion)"></button>
+													data-ng-click="adicionarProductoCompra(producto_compra)"></button>
 											</td>
-										</tr>
-										<tr>
-											<th colspan="2">TOTAL</th>
-											<td>{{sumaDebe}}</td>
-											<td>{{sumaHaber}}</td>
-											<td></td>
-										</tr>
-										<tr>
-											<th colspan="2">TOTAL DIFERENCIA</th>
-											<th colspan="2" style="text-align: center;">{{sumaHaber
-												- sumaDebe}}</th>
 										</tr>
 									</tbody>
 								</table>
