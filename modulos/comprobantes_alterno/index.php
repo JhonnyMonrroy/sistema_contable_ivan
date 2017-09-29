@@ -53,6 +53,8 @@
 						data-ng-click="editarTransaccion(transaccion)">Editar</button>
 <!-- 					<button type="button" class="btn btn-danger btn-xs" -->
 <!-- 						data-ng-click="eliminarCuenta(cuenta)" disabled="disabled">Eliminar</button> -->
+					<button type="button" class="btn btn-secondary btn-xs"
+						data-ng-click="imprimirComprobante(transaccion)">Imprimir</button>
 				</td>
 			</tr>
 		</table>

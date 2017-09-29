@@ -129,6 +129,15 @@ app
 					};
 
 					/**
+					 * ver reporte pdf del comprobante
+					 * 
+					 */
+					$scope.imprimirComprobante = function(transaccion) {
+						window.open('pdf.php?id='+transaccion.id,'popup','width=300,height=400')
+					};
+
+
+					/**
 					 * Se prepara la transaccion usuario para editar
 					 */
 					$scope.editarTransaccion = function(transaccion) {

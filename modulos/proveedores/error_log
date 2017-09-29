@@ -1,0 +1,3 @@
+[26-Sep-2017 14:08:29 UTC] PHP Notice:  Undefined index: nit in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/proveedores/api.php on line 135
+[26-Sep-2017 14:08:29 UTC] PHP Notice:  Undefined index: nombre_contacto in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/proveedores/api.php on line 139
+[26-Sep-2017 14:08:29 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/proveedores/api.php on line 140
