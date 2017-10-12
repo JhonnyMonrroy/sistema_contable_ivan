@@ -1,0 +1,17 @@
+[21-Sep-2017 01:20:08 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:20:08 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:22:18 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:22:18 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:22:37 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:22:37 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:23:35 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:23:35 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:25:32 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:25:32 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:27:07 UTC] PHP Notice:  Undefined variable: fecha in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 159
+[21-Sep-2017 01:27:07 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:27:07 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:34:45 UTC] PHP Notice:  Undefined variable: fecha in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 159
+[21-Sep-2017 01:34:45 UTC] PHP Notice:  Undefined variable: trasaccion in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[21-Sep-2017 01:34:45 UTC] PHP Notice:  Trying to get property of non-object in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/rpt_comprobante.php on line 160
+[26-Sep-2017 15:18:55 UTC] PHP Notice:  Undefined index: fecha in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/comprobantes/api.php on line 64

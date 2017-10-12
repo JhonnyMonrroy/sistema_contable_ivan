@@ -1,0 +1,45 @@
+[25-Aug-2017 19:21:43 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 76
+[25-Aug-2017 19:21:59 UTC] PHP Notice:  Undefined index: nit in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 135
+[25-Aug-2017 19:21:59 UTC] PHP Notice:  Undefined index: razon_social in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 136
+[25-Aug-2017 19:21:59 UTC] PHP Notice:  Undefined index: nombre_contacto in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 139
+[25-Aug-2017 19:21:59 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 140
+[25-Aug-2017 19:31:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 72
+[25-Aug-2017 19:32:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 72
+[25-Aug-2017 19:32:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 72
+[25-Aug-2017 19:35:41 UTC] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 71
+[25-Aug-2017 19:36:46 UTC] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 71
+[25-Aug-2017 19:38:14 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:38:16 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:38:17 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:38:17 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:38:17 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:38:18 UTC] PHP Parse error:  syntax error, unexpected 'function__construct' (T_STRING), expecting function (T_FUNCTION) in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 19
+[25-Aug-2017 19:41:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 72
+[25-Aug-2017 19:43:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 72
+[25-Aug-2017 19:44:03 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Aug-2017 19:44:12 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Aug-2017 19:52:48 UTC] PHP Notice:  Undefined index: fono in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 131
+[25-Aug-2017 19:52:48 UTC] PHP Notice:  Undefined index: obs in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 132
+[16-Sep-2017 23:48:43 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[18-Sep-2017 21:38:27 UTC] PHP Warning:  Creating default object from empty value in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 148
+[18-Sep-2017 21:38:27 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[18-Sep-2017 21:38:27 UTC] PHP Fatal error:  Call to undefined method stdClass::guardar() in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 153
+[19-Sep-2017 22:23:34 UTC] PHP Warning:  Creating default object from empty value in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 148
+[19-Sep-2017 22:23:34 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[19-Sep-2017 22:23:34 UTC] PHP Fatal error:  Call to undefined method stdClass::guardar() in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 153
+[25-Sep-2017 15:02:44 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:18:20 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:19:56 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:20:12 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:20:21 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:21:26 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:22:18 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:22:33 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:22:42 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:23:48 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:24:52 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:25:09 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[25-Sep-2017 20:42:56 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[26-Sep-2017 14:02:00 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[26-Sep-2017 19:36:20 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152
+[26-Sep-2017 21:23:51 UTC] PHP Notice:  Undefined index: cel in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/sucursales/api.php on line 152

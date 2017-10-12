@@ -1,0 +1,17 @@
+[02-Oct-2017 13:49:53 UTC] PHP Notice:  Undefined index: id_producto in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 13:49:53 UTC] PHP Notice:  Undefined index: id_sucursal in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 13:49:53 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 14:09:36 UTC] PHP Notice:  Undefined index: id_producto in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 14:09:36 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 14:09:36 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[02-Oct-2017 14:09:52 UTC] PHP Notice:  Undefined index: id_producto in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 79
+[04-Oct-2017 23:44:44 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:44 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:50 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:50 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:54 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:54 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:59 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[04-Oct-2017 23:44:59 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex1/api.php on line 79
+[12-Oct-2017 00:34:54 UTC] PHP Notice:  Undefined index: fechaInicio in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 157
+[12-Oct-2017 00:34:54 UTC] PHP Notice:  Undefined index: fechaFin in /home/jicc/public_html/SISTEMA_CONTABLE/modulos/kardex/api.php on line 157
